@@ -16,10 +16,6 @@ public class RandomComboImpl implements RandomCombo {
         HashMap<Integer, HashMap<String, String>> combo = new HashMap<Integer, HashMap<String, String>>();
         HashMap<String, String> map = new HashMap<String, String>();
 
-//        List<List<Object>> combo = new ArrayList<List<Object>>();
-//        List<Object> list = new ArrayList<Object>();
-//        list.add(n);
-
         int random = (int) (Math.random() * 1000);
         if (random % 3 == 0) {
 //            System.out.println("套餐 1");
@@ -48,12 +44,13 @@ public class RandomComboImpl implements RandomCombo {
             combo.put(n, map);
         }
 
-        for (Integer key1: combo.keySet()) {
-            for (String key2: map.keySet()) {
-                System.out.println(key2 + "-->" + map.get(key2));
-            }
-            System.out.println(key1 + "-->" + combo.get(key1));
-        }
+//        for (Integer key1: combo.keySet()) {
+//            for (String key2: map.keySet()) {
+//                System.out.println(key2 + "-->" + map.get(key2));
+//            }
+//            System.out.println(key1 + "-->" + combo.get(key1));
+//        }
+
     }
 
 
