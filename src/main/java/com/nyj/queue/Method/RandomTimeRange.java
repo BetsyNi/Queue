@@ -1,6 +1,5 @@
-package com.nyj.queue.Service.Impl;
+package com.nyj.queue.Method;
 
-import com.nyj.queue.Service.RandomTime;
 import lombok.Data;
 
 import java.util.concurrent.TimeUnit;
@@ -10,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * @date : 2019/4/13
  */
 @Data
-public class RandomTimeImpl implements RandomTime {
+public class RandomTimeRange {
 
     public int randomTime(int minTime,int maxTime) {
         // 强转类型和后面的式子要分别加括号，否则值为0
@@ -32,7 +31,7 @@ public class RandomTimeImpl implements RandomTime {
     }
 
     public static void main(String[] args) {
-        RandomTimeImpl randomTime = new RandomTimeImpl();
+        RandomTimeRange randomTime = new RandomTimeRange();
         for (int i = 0; i < 10; i++) {
 
             System.out.println(randomTime.randomTime(1,10));

@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87a948d2-6087-4b80-9dd5-ea1395452168" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomComboImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomComboImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomTimeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomTimeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Test/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Thread/CustomerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Thread/CustomerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nyj/queue/Service/Impl/RandomComboImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nyj/queue/Service/Impl/RandomComboImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nyj/queue/Service/Impl/RandomTimeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nyj/queue/Service/Impl/RandomTimeImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nyj/queue/Test/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nyj/queue/Test/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nyj/queue/Thread/CustomerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nyj/queue/Thread/CustomerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomComboImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomTimeImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomTimeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTimeRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomCombo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomCombo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTime.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,14 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomComboImpl.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomCombo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -47,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Thread/CustomerThread.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
@@ -57,10 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomTimeImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTimeRange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="323">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,9 +107,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Entity/Window.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Thread/CustomerThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomTimeImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Test/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomComboImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomTimeImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomComboImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTimeImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTime.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTimeRange.java" />
       </list>
     </option>
   </component>
@@ -199,16 +195,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="queue" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-              <item name="Impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="QueueTheory" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graduation project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="queue" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -231,7 +217,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555471062845" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555587315533" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -306,15 +292,16 @@
       <workItem from="1555378660050" duration="1577000" />
       <workItem from="1555384003186" duration="12921000" />
       <workItem from="1555469847778" duration="632000" />
-      <workItem from="1555585474166" duration="672000" />
+      <workItem from="1555585474166" duration="1332000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40478000" />
+    <option name="totallyTimeSpent" value="41138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="33" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
@@ -329,7 +316,7 @@
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50067025" side_tool="true" weight="0.8797654" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Find" order="6" visible="true" weight="0.32991204" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.35190615" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -366,20 +353,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomCombo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Entity/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -399,30 +372,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomComboImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/Impl/RandomTimeImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -444,6 +397,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomCombo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTimeRange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomTimeRange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nyj/queue/Service/RandomCombo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -1,16 +1,12 @@
-package com.nyj.queue.Service.Impl;
+package com.nyj.queue.Method;
 
-import com.nyj.queue.Service.RandomCombo;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * @author : Ni Yujia
  * @date : 2019/4/15
  */
-public class RandomComboImpl implements RandomCombo {
+public class RandomCombo {
     public void randomCombo(int n) {
 
         HashMap<Integer, HashMap<String, String>> combo = new HashMap<Integer, HashMap<String, String>>();
@@ -55,7 +51,7 @@ public class RandomComboImpl implements RandomCombo {
 
 
     public static void main(String[] args) {
-        RandomComboImpl randomCombo = new RandomComboImpl();
+        RandomCombo randomCombo = new RandomCombo();
         for (int i= 0; i < 3; i++) {
             randomCombo.randomCombo(i);
             System.out.println("***************************");
