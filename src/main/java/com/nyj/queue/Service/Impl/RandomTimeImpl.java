@@ -14,13 +14,13 @@ public class RandomTimeImpl implements RandomTime {
 
     public int randomTime(int minTime,int maxTime) {
         // 强转类型和后面的式子要分别加括号，否则值为0
-        int sleepTime = (int) (Math.random() * (maxTime - minTime) + minTime);
+        int sleepTime = (int) (Math.random() * (maxTime - minTime) + minTime) * 1000;
         try {
             TimeUnit.MILLISECONDS.sleep(sleepTime);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return sleepTime;
+        return (sleepTime/1000);
     }
 
     public boolean rateTime(double rate) {
@@ -35,7 +35,7 @@ public class RandomTimeImpl implements RandomTime {
         RandomTimeImpl randomTime = new RandomTimeImpl();
         for (int i = 0; i < 10; i++) {
 
-//            System.out.println(randomTime.randomTime(1,10));
+            System.out.println(randomTime.randomTime(1,10));
 
 //            if (randomTime.rateTime(0.5)) {
 //                System.out.println(true);

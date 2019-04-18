@@ -44,18 +44,21 @@ public class RandomComboImpl implements RandomCombo {
             combo.put(n, map);
         }
 
-//        for (Integer key1: combo.keySet()) {
-//            for (String key2: map.keySet()) {
-//                System.out.println(key2 + "-->" + map.get(key2));
-//            }
-//            System.out.println(key1 + "-->" + combo.get(key1));
-//        }
+        for (Integer key1: combo.keySet()) {
+            System.out.println(key1 + ":" + combo.get(key1));
+            for (String key2: map.keySet()) {
+                System.out.println(key2 + ":" + map.get(key2));
+            }
+        }
 
     }
 
 
     public static void main(String[] args) {
         RandomComboImpl randomCombo = new RandomComboImpl();
-        randomCombo.randomCombo(9);
+        for (int i= 0; i < 3; i++) {
+            randomCombo.randomCombo(i);
+            System.out.println("***************************");
+        }
     }
 }

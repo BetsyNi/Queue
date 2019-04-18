@@ -5,9 +5,10 @@ package com.nyj.queue.Thread;
  * @date : 2019/4/15
  */
 public class CustomerThread extends Thread {
-    
+
     @Override
     public void run() {
-        
+
     }
+
 }
