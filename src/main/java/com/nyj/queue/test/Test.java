@@ -1,4 +1,4 @@
-package com.nyj.queue.Test;
+package com.nyj.queue.test;
 
 /**
  * @author : Ni Yujia

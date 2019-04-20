@@ -1,4 +1,4 @@
-package com.nyj.queue.Thread;
+package com.nyj.queue.thread;
 
 /**
  * @author : Ni Yujia

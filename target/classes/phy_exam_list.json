@@ -1,0 +1,44 @@
+[
+  {
+    "no": 1,
+    "name": "眼科",
+    "minTime": 1,
+    "maxTime": 5
+  },
+  {
+    "no": 2,
+    "name": "耳科",
+    "minTime": 1,
+    "maxTime": 3
+  },
+  {
+    "no": 3,
+    "name": "口腔科",
+    "minTime": 3,
+    "maxTime": 10
+  },
+  {
+    "no": 4,
+    "name": "心电图",
+    "minTime": 5,
+    "maxTime": 20
+  },
+  {
+    "no": 5,
+    "name": "血常规",
+    "minTime": 5,
+    "maxTime": 10
+  },
+  {
+    "no": 6,
+    "name": "肝功能",
+    "minTime": 10,
+    "maxTime": 30
+  },
+  {
+    "no": 7,
+    "name": "B超",
+    "minTime": 15,
+    "maxTime": 25
+  }
+]

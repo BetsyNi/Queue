@@ -1,4 +1,4 @@
-package com.nyj.queue.Entity;
+package com.nyj.queue.entity;
 
 import lombok.Data;
 

@@ -1,0 +1,153 @@
+[
+  {
+    "no": 1,
+    "phyExamNos": [
+      1,
+      2
+    ]
+  },
+  {
+    "no": 2,
+    "phyExamNos": [
+      3
+    ]
+  },
+  {
+    "no": 3,
+    "phyExamNos": [
+      1,
+      2
+    ]
+  },
+  {
+    "no": 4,
+    "phyExamNos": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "no": 5,
+    "phyExamNos": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "no": 6,
+    "phyExamNos": [
+      1,
+      2
+    ]
+  },
+  {
+    "no": 7,
+    "phyExamNos": [
+      2,
+      3
+    ]
+  },
+  {
+    "no": 8,
+    "phyExamNos": [
+      7
+    ]
+  },
+  {
+    "no": 9,
+    "phyExamNos": [
+      5,
+      6
+    ]
+  },
+  {
+    "no": 10,
+    "phyExamNos": [
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "no": 11,
+    "phyExamNos": [
+      6,
+      7
+    ]
+  },
+  {
+    "no": 12,
+    "phyExamNos": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "no": 13,
+    "phyExamNos": [
+      3
+    ]
+  },
+  {
+    "no": 14,
+    "phyExamNos": [
+      4,
+      7
+    ]
+  },
+  {
+    "no": 15,
+    "phyExamNos": [
+      3,
+      4,
+      7
+    ]
+  },
+  {
+    "no": 16,
+    "phyExamNos": [
+      1,
+      6
+    ]
+  },
+  {
+    "no": 17,
+    "phyExamNos": [
+      3,
+      7
+    ]
+  },
+  {
+    "no": 18,
+    "phyExamNos": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  {
+    "no": 19,
+    "phyExamNos": [
+      2,
+      5,
+      6
+    ]
+  },
+  {
+    "no": 20,
+    "phyExamNos": [
+      3,
+      6
+    ]
+  }
+  }
+]
