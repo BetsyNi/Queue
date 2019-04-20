@@ -40,11 +40,14 @@ public class Person {
         System.out.println(format.format(new Date()));
 
         String beginTime = "19:01:20";
-        String endTime = "19:01:20";
+        String endTime = "2019-04-20 19:01:20";
         SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat format2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date d1 = format1.parse(beginTime);
-        Date d2 = format1.parse(endTime);
+        Date d2 = format2.parse(endTime);
         System.out.println(endTime.compareTo(beginTime));
+        System.out.println(d1.getTime());
+        System.out.println(d2.getTime());
     }
 
 }
