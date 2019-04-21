@@ -42,9 +42,9 @@ public class RandomCombo {
 
         for (Integer key1: combo.keySet()) {
             System.out.println(key1 + ":" + combo.get(key1));
-            for (String key2: map.keySet()) {
-                System.out.println(key2 + ":" + map.get(key2));
-            }
+//            for (String key2: map.keySet()) {
+//                System.out.println(key2 + ":" + map.get(key2));
+//            }
         }
 
     }

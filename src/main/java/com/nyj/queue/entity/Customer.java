@@ -16,6 +16,11 @@ public class Customer {
     private int id;
     // 顾客到达时间
     private long arriveTime;
+    // 一支队伍的排队时间
+    private int queueTime;
+    // 总的排队时间
+    private int sumQueueTime;
+
     // 下一顾客到达最短时间
     private int cusMinTime = 0;
     // 下一顾客到达最大时间
