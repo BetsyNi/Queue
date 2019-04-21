@@ -1,6 +1,7 @@
 package com.nyj.queue.util;
 
 import com.nyj.queue.exception.BusinessException;
+import com.sun.org.apache.xerces.internal.parsers.IntegratedParserConfiguration;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -65,6 +66,21 @@ public class RandomUtils {
     }
 
     /**
+     * 获取指定时间所对应的时间戳,单位 ms
+     *
+     * @param time 格式要求: HH:mm:ss
+     * @return 该时间自当天 08:00:00 之后所经过的毫秒数
+     */
+    public static int getTime(String time) {
+        try {
+            return (int) format.parse(time).getTime();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    /**
      * 以易读格式获取一天指定时间范围内时间,格式: HH:mm:ss
      *
      * @param beginTime 格式要求: HH:mm:ss
@@ -78,8 +94,10 @@ public class RandomUtils {
     }
 
     public static void main(String[] args) throws ParseException {
+
         for (int i = 0; i < 100; i++) {
-            System.out.println(RandomUtils.randomTimeForHuman("09:00:00", "12:00:00"));
+            System.out.println(RandomUtils.randomTime("08:00:00", "09:00:00"));
+            System.out.println(RandomUtils.randomTimeForHuman("08:00:00", "09:00:00"));
         }
     }
 }

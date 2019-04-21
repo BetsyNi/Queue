@@ -14,5 +14,4 @@ public class BusinessException extends RuntimeException {
 
     private int status;
     private String msg;
-
 }

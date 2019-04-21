@@ -4,9 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -28,7 +25,7 @@ public class Person {
     /**
      * 体检人到达医院的时间
      */
-    private Long arriveTime;
+    private String arriveTime;
     /**
      * 病人所需要体检的项目列表(体检套餐)
      */

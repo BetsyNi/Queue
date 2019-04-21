@@ -1,11 +1,13 @@
 package com.nyj.queue.entity;
 
 import com.alibaba.fastjson.JSON;
+import com.nyj.queue.util.RandomUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
@@ -29,11 +31,12 @@ public class Application {
         // 造一批人
         // TODO-JING 后续此处可更改为从配置文件读入或从键盘读入
         List<Person> persons = LoadConfigSingleton.getSingleton().persons;
+        persons.sort(Comparator.comparingInt(o -> RandomUtils.getTime(o.getArriveTime())));
         logger.info("加载体检人列表:{}", JSON.toJSONString(persons));
 
         // 为每个体检窗口创建一个队列
         for (PhyExam phyExam : phyExams) {
-            Deque<Person> queue = new LinkedList<Person>();
+            Deque<Person> queue = new LinkedList<>();
         }
     }
 }
