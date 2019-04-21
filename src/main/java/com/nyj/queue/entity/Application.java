@@ -9,8 +9,10 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.Deque;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 体检排队系统启动类
@@ -34,9 +36,32 @@ public class Application {
         persons.sort(Comparator.comparingInt(o -> RandomUtils.getTime(o.getArriveTime())));
         logger.info("加载体检人列表:{}", JSON.toJSONString(persons));
 
+        // 所有体检窗口
+        // TODO-JING 后续单独提取出来
+        Map<Integer, Deque<Person>> phyExamQueues = new HashMap<>(phyExams.size());
         // 为每个体检窗口创建一个队列
         for (PhyExam phyExam : phyExams) {
-            Deque<Person> queue = new LinkedList<>();
+            Deque<Person> phyExamQueue = new LinkedList<>();
+            phyExamQueues.put(phyExam.getNo(), phyExamQueue);
         }
+        // 开始排队
+        for (Person person : persons) {
+            // 当前人所选购的体检套餐
+            List<Integer> phyExamCombo = person.getPhyExamNos();
+            int min = Integer.MAX_VALUE;
+            // 该人
+            int no = -1;
+            for (Integer phyExamNo : phyExamCombo) {
+                // 根据体检项目编号获取该体检项目下队列
+                Deque<Person> somePerson = phyExamQueues.get(phyExamNo);
+                int expectedTime = somePerson.size() * phyExams.get(phyExamNo).getMaxTime();
+                if (expectedTime < min) {
+                    min = expectedTime;
+                    no = phyExamNo;
+                }
+            }
+        }
+        System.out.println("Queue:" + JSON.toJSONString(phyExamQueues));
+
     }
 }

@@ -1,7 +1,6 @@
 package com.nyj.queue.util;
 
 import com.nyj.queue.exception.BusinessException;
-import com.sun.org.apache.xerces.internal.parsers.IntegratedParserConfiguration;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
