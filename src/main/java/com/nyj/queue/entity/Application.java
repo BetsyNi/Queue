@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 体检排队系统启动类
@@ -33,6 +34,7 @@ public class Application {
         // 造一批人
         // TODO-JING 后续此处可更改为从配置文件读入或从键盘读入
         List<Person> persons = LoadConfigSingleton.getSingleton().persons;
+        // 按到达时间排序
         persons.sort(Comparator.comparingInt(o -> RandomUtils.getTime(o.getArriveTime())));
         logger.info("加载体检人列表:{}", JSON.toJSONString(persons));
 
@@ -45,11 +47,15 @@ public class Application {
             phyExamQueues.put(phyExam.getNo(), phyExamQueue);
         }
         // 开始排队
+        // 每个人创建一个线程
+        ThreadPoolExecutor personThreadPool = new ThreadPoolExecutor();
         for (Person person : persons) {
+            new Thread(() -> {
+                logger.info("编号:{}前来体检", person.getNo());
+            }).start();
             // 当前人所选购的体检套餐
             List<Integer> phyExamCombo = person.getPhyExamNos();
             int min = Integer.MAX_VALUE;
-            // 该人
             int no = -1;
             for (Integer phyExamNo : phyExamCombo) {
                 // 根据体检项目编号获取该体检项目下队列
@@ -60,6 +66,9 @@ public class Application {
                     no = phyExamNo;
                 }
             }
+            Deque<Person> tmp = phyExamQueues.get(no);
+            tmp.add(person);
+            phyExamQueues.put(no, tmp);
         }
         System.out.println("Queue:" + JSON.toJSONString(phyExamQueues));
 
