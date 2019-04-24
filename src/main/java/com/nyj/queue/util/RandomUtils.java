@@ -79,6 +79,10 @@ public class RandomUtils {
         return 0;
     }
 
+    public static String getTimeForHuman(int time) {
+        return RandomUtils.format.format(time);
+    }
+
     /**
      * 以易读格式获取一天指定时间范围内时间,格式: HH:mm:ss
      *
@@ -93,10 +97,7 @@ public class RandomUtils {
     }
 
     public static void main(String[] args) throws ParseException {
-
-        for (int i = 0; i < 100; i++) {
-            System.out.println(RandomUtils.randomTime("08:00:00", "09:00:00"));
-            System.out.println(RandomUtils.randomTimeForHuman("08:00:00", "09:00:00"));
-        }
+        System.out.println(RandomUtils.getTimeForHuman(1000));
+        System.out.println(RandomUtils.getTime("08:03:49"));
     }
 }

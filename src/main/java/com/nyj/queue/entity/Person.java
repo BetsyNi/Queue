@@ -23,9 +23,13 @@ public class Person {
      */
     private Integer no;
     /**
-     * 体检人到达医院的时间
+     * 体检人到达时间
      */
     private String arriveTime;
+    /**
+     * 体检人退出队列时间
+     */
+    private String outTime;
     /**
      * 病人所需要体检的项目列表(体检套餐)
      */
