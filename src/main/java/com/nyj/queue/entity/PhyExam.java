@@ -33,4 +33,11 @@ public class PhyExam {
      */
     private Integer maxTime;
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof PhyExam) {
+            return ((PhyExam) obj).getNo().equals(this.getNo());
+        }
+        return false;
+    }
 }

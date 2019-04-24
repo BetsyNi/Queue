@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,11 +24,11 @@ public class Person {
      */
     private Integer no;
     /**
-     * 体检人到达时间
+     * 体检人进入某一队列时间点
      */
     private String arriveTime;
     /**
-     * 体检人退出队列时间
+     * 体检人退出某一队列时间点
      */
     private String outTime;
     /**
@@ -35,4 +36,21 @@ public class Person {
      */
     private List<Integer> phyExamNos;
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Person) {
+            return ((Person) obj).getNo().equals(this.getNo());
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        List<Person> persons = new ArrayList<>();
+        List<Integer> nos = new ArrayList<>();
+        nos.add(1);
+        nos.add(2);
+        nos.add(3);
+        Person p = new Person(1, "1", "2", nos);
+        persons.add(p);
+        System.out.println(persons.indexOf(p));
+    }
 }

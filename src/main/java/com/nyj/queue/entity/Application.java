@@ -26,7 +26,7 @@ public class Application {
 
     private static Logger logger = LoggerFactory.getLogger(Application.class);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         // 加载所有体检项目列表(体检窗口列表)
         List<PhyExam> phyExams = LoadConfigSingleton.getSingleton().phyExams;
         logger.info("加载体检项目列表:{}", JSON.toJSONString(phyExams));
@@ -34,14 +34,8 @@ public class Application {
         // 造一批人
         // TODO-JING 后续此处可更改为从配置文件读入或从键盘读入
         List<Person> persons = LoadConfigSingleton.getSingleton().persons;
-        // 按到达时间排序
         persons.sort(Comparator.comparingInt(o -> RandomUtils.getTime(o.getArriveTime())));
-        for (Person person : persons) {
-            System.out.println(RandomUtils.getTime(person.getArriveTime()));
-        }
         logger.info("加载体检人列表:{}", JSON.toJSONString(persons));
-
-        logger.info("最早到达的人:{}", JSON.toJSONString(MathUtils.earliestArrive(persons)));
 
         //// 所有体检窗口
         // TODO-JING 后续单独提取出来
@@ -54,51 +48,65 @@ public class Application {
 
         int currTime = 0;
         while (persons.size() > 0) {
+            //Thread.sleep(300);
+            for (Map.Entry<Integer, Deque<Person>> entry : phyExamQueues.entrySet()) {
+                Person firstPerson = entry.getValue().peekFirst();
+                if (firstPerson != null) {
+                    String firstPersonOutTimeStr = firstPerson.getOutTime();
+                    int firstPersonOutTime = RandomUtils.getTime(firstPersonOutTimeStr);
+                    if (firstPersonOutTime == currTime) {
+                        entry.getValue().pollFirst();
+                    }
+                }
+            }
             Person person = MathUtils.earliestArrive(persons);
             if (RandomUtils.getTime(person.getArriveTime()) != currTime) {
-                currTime+= Constant.THOUSAND;
+                currTime += Constant.THOUSAND;
                 continue;
             }
             int min = Integer.MAX_VALUE;
             int no = -1;
-            int expectTime = 0;
+            // 预期排到该病人的时间
+            int expectServerTime = 0;
             for (int phyExamNo : person.getPhyExamNos()) {
                 Deque<Person> tmpQueue = phyExamQueues.get(phyExamNo);
                 if (tmpQueue.size() > 0) {
                     Person lastPerson = tmpQueue.peekLast();
-                    int lastPersonOutTime = RandomUtils.getTime(lastPerson.getOutTime()) - currTime;
+                    // 该队列最后一个人离开队列的时间点
+                    int lastPersonOutTime = RandomUtils.getTime(lastPerson.getOutTime());
                     if (min > lastPersonOutTime) {
                         min = lastPersonOutTime;
                         no = phyExamNo;
-                        expectTime = lastPersonOutTime - currTime;
+                        // 如果选择排该队列
+                        expectServerTime = lastPersonOutTime;
                     }
                 } else {
-                    min = 0;
                     no = phyExamNo;
+                    expectServerTime = currTime;
                     break;
                 }
             }
-            person.setArriveTime(currTime + );
+            PhyExam queryPhyExam = new PhyExam(no, null, null, null);
+            String time =
+                RandomUtils.getTimeForHuman(expectServerTime + phyExams.get(phyExams.indexOf(queryPhyExam)).getMaxTime() * 60 * Constant.THOUSAND);
+            Person tmpPerson = new Person(person.getNo(), person.getArriveTime(), time, person.getPhyExamNos());
+            person.setArriveTime(time);
+            person.setOutTime(time);
+            person.getPhyExamNos().remove((Integer) no);
+            if (person.getPhyExamNos().size() == 0) {
+                persons.remove(person);
+            }
+            Deque<Person> phyExamQueue = phyExamQueues.get(no);
+            phyExamQueue.offerLast(tmpPerson);
+            System.out.println();
+            logger.info("{} {}号病人前来体检,加入{}体检队列,预计出队时间:{},剩余未体检项:{}", RandomUtils.getTimeForHuman(currTime),
+                person.getNo(), no, person.getOutTime(), JSON.toJSONString(person.getPhyExamNos()));
+            logger.info("{} 当前所有体检窗口队列情况:", RandomUtils.getTimeForHuman(currTime));
+            for (Map.Entry<Integer, Deque<Person>> entry : phyExamQueues.entrySet()) {
+                logger.info("{}", JSON.toJSONString(entry));
+            }
+            currTime += Constant.THOUSAND;
+            logger.info("剩余病人:{}", JSON.toJSONString(persons));
         }
-        //// 开始排队
-        //for (Person person : persons) {
-        //    // 当前人所选购的体检套餐
-        //    List<Integer> phyExamCombo = person.getPhyExamNos();
-        //    int min = Integer.MAX_VALUE;
-        //    int no = -1;
-        //    for (Integer phyExamNo : phyExamCombo) {
-        //        // 根据体检项目编号获取该体检项目下队列
-        //        Deque<Person> somePerson = phyExamQueues.get(phyExamNo);
-        //        int expectedTime = somePerson.size() * phyExams.get(phyExamNo).getMaxTime();
-        //        if (expectedTime < min) {
-        //            min = expectedTime;
-        //            no = phyExamNo;
-        //        }
-        //    }
-        //    Deque<Person> tmp = phyExamQueues.get(no);
-        //    tmp.add(person);
-        //    phyExamQueues.put(no, tmp);
-        //}
-        //System.out.println("Queue:" + JSON.toJSONString(phyExamQueues));
     }
 }
